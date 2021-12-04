@@ -1,6 +1,6 @@
 # GraphCMS Remix Starter
 
-This is a basic auth starter for GraphCMS & Remix.
+This is a basic auth (register/login/logout) starter for GraphCMS & Remix.
 
 ## Setup
 
@@ -39,5 +39,18 @@ You'll need to add the following fields:
  <summary>3. Create a Permanent Auth Token</summary>
 
 Create an API token with ALL permissions to ALL models in ALL stages. **Set the default stage to DRAFT**.
+
+</details>
+
+<details>
+ <summary>4. Add secrets to `.env`</summary>
+
+Next add your API endpoint, token, and session secret to the file `.env`.
+
+```dosini
+GRAPHCMS_ENDPOINT=
+GRAPHCMS_TOKEN=
+SESSION_SECRET=
+```
 
 </details>
