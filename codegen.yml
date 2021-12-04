@@ -1,0 +1,20 @@
+overwrite: true
+schema:
+  - ${GRAPHCMS_ENDPOINT}:
+      headers:
+        Authorization: Bearer ${GRAPHCMS_TOKEN}
+documents: "./app/graphql/**/*.{gql,graphql}"
+generates:
+  ./app/generated/schema.server.ts:
+    plugins:
+      - typescript
+      - typescript-operations
+      - typescript-graphql-request
+      - fragment-matcher
+config:
+  useExplicitTyping: true
+  futureProofUnions: true
+  exportFragmentSpreadSubTypes: true
+hooks:
+  afterAllFileWrite:
+    - prettier --write

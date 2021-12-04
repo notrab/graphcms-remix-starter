@@ -1,0 +1,9 @@
+mutation CreateAuthUser($name: String!, $email: String!, $password: String!) {
+  user: createAuthUser(
+    data: { name: $name, email: $email, password: $password, public: false }
+  ) {
+    id
+    name
+    email
+  }
+}
